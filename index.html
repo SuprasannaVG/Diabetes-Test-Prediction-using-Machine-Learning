@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Test Prediction</title>
+    <style>
+        body {
+            background-image: url("https://jaxsleepcenter.com/wp-content/uploads/2018/06/Checking-blood-sugar-with-a-blood-test.jpg"); /* Add background image */
+            background-size: cover;
+            font-family: Arial, sans-serif; /* Set font */
+            text-align: center; /* Align text to center */
+            color: rgb(12, 11, 11); /* Set text color */
+        }
+        form {
+            margin-top: 50px; /* Add top margin to form */
+        }
+        .result {
+            margin-top: 20px; /* Add top margin to result */
+        }
+        label {
+            display: block; /* Display labels in block style */
+            margin-bottom: 5px; /* Add bottom margin to labels */
+        }
+        input[type="number"] {
+            width: 200px; /* Set input width */
+            padding: 8px; /* Add padding */
+            margin-bottom: 10px; /* Add bottom margin */
+            border-radius: 5px; /* Add border radius */
+            border: 1px solid #111010; /* Add border */
+        }
+        input[type="submit"] {
+            background-color: #4CAF50; /* Green background color */
+            color: rgb(12, 11, 11); /* White text color */
+            padding: 10px 20px; /* Add padding */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Add border radius */
+            cursor: pointer; /* Add cursor pointer */
+            transition: background-color 0.3s; /* Add transition */
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+        .result h2 {
+            color: red; /* Set text color to red for positive outcome */
+        }
+        .result h2.negative {
+            color: green; /* Set text color to green for negative outcome */
+        }
+    </style>
+</head>
+<body>
+    <h1>Diabetes Test Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="Pregnancies">Pregnancies:</label><br>
+        <input type="number" id="Pregnancies" name="Pregnancies" required><br>
+        <label for="Glucose">Glucose:</label><br>
+        <input type="number" id="Glucose" name="Glucose" required><br>
+        <label for="BloodPressure">Blood Pressure:</label><br>
+        <input type="number" id="BloodPressure" name="BloodPressure" required><br>
+        <label for="SkinThickness">Skin Thickness:</label><br>
+        <input type="number" id="SkinThickness" name="SkinThickness" required><br>
+        <label for="Insulin">Insulin:</label><br>
+        <input type="number" id="Insulin" name="Insulin" required><br>
+        <label for="BMI">BMI (1 decimal place):</label><br>
+        <input type="number" id="BMI" name="BMI" step="0.1" required><br>
+        <label for="DiabetesPedigreeFunction">Diabetes Pedigree Function:</label><br>
+        <input type="number" id="DiabetesPedigreeFunction" name="DiabetesPedigreeFunction" step="0.001" required><br>
+        <label for="Age">Age:</label><br>
+        <input type="number" id="Age" name="Age" required><br>
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if result %}
+    <div class="result">
+        {% if result == 'Positive' %}
+        <h2>The outcome is: <span class="positive">{{ result }}</span></h2>
+        {% else %}
+        <h2 class="negative">The outcome is: {{ result }}</h2>
+        {% endif %}
+    </div>
+    {% endif %}
+</body>
+</html>
