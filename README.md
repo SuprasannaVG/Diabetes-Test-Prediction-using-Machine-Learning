@@ -2,6 +2,9 @@
 
 # Skills : Python, Machine-Learning, Modelling, Flask-Deployment , Predictive Analysis
 
+![Screenshot 2024-03-26 015336](https://github.com/SuprasannaVG/Diabetes-Test-Prediction-using-Machine-Learning/assets/125822020/4fe0ec28-e357-43a2-8b22-b1388c69bb5a)
+
+
 # Introduction:
 Diabetes has emerged as a critical health concern globally, affecting millions of individuals and burdening healthcare systems. Early detection and prediction of diabetes risk play a pivotal role in effective management and prevention of complications associated with the disease. Machine learning techniques offer promising avenues for developing predictive models that can analyze various health parameters to forecast the likelihood of diabetes onset.
 
@@ -27,6 +30,11 @@ To implement the diabetes prediction system, a comprehensive approach involving 
 
 # Result 
 The predictive model analyzes medical attributes to classify individuals as either positive or negative for diabetes onset. Using machine learning algorithms, it determines the likelihood of diabetes based on input parameters. This classification aids in early intervention and personalized healthcare management.
+
+![Screenshot 2024-03-26 015143](https://github.com/SuprasannaVG/Diabetes-Test-Prediction-using-Machine-Learning/assets/125822020/43444b45-5f61-4310-a34d-034b22fd5500)
+
+
+![Screenshot 2024-03-26 015252](https://github.com/SuprasannaVG/Diabetes-Test-Prediction-using-Machine-Learning/assets/125822020/a87ff04a-9266-4a99-8361-08d77ca0219f)
 
 
 # Advantage 
